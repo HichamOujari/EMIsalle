@@ -37,7 +37,7 @@ function fill(month,year){
 		document.getElementById(i).className=document.getElementById(i).className.replace(" occuped","");
 	}
 	for(i=1;i<=end;i++){
-		if(isOccuped(i)){
+		if(isOccuped(i) || (i+start-1)%7==0 || (i+start-1)%7==1 ){
 			document.getElementById(i+start-1).className+=" occuped";
 		}
 		document.getElementById(i+start-1).innerHTML=i;

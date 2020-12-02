@@ -17,6 +17,10 @@ select,input{
 	border-radius: 30px;
 	border: 2px solid black;
 }
+select>option{
+	border-radius: 30px;
+	border: 2px solid black;
+}
 .barnav{
 	background-color: #2471A3;
 	text-align: center;
@@ -198,8 +202,10 @@ select,input{
 	width: 1fr;
 	padding-top: 17px;
 	font-size: 20px;
-	cursor: pointer;
 	background-color: #66B0DF;
+}
+.semaine>div>i{
+	cursor: pointer;
 }
 .occuped{
 	color: red;
@@ -215,6 +221,7 @@ select,input{
 	margin-top: 60px;
 	border-radius: 30px;
 	box-shadow: 20px 20px 30px black;
+	border:2px solid black;
 }
 .titleIns{
 	text-align: center;
@@ -225,6 +232,7 @@ select,input{
 }
 .formIns>form{
 	padding:40px;
+	border-radius: 30px;
 }
 .formIns>form>label{
 	padding:40px;
