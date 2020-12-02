@@ -18,24 +18,34 @@ function day_num(day,month,year){
 	}
 }
 
+const dates = ['12-10-2020','12-18-2020','12-1-2020','12-20-2020','12-8-2020']
+
+function isOccuped(jour){
+	for(k=0;k<dates.length;k++){
+		if(jour===parseInt(dates[k].split('-')[1])){
+			return true;
+		}
+	}
+	return false;
+}
 
 function fill(month,year){
 	var start =day_num(1,month,year);
 	var end = new Date(year, month, 0).getDate();
 	for(i=1;i<=35;i++){
 		document.getElementById(i).innerHTML="";
+		document.getElementById(i).className=document.getElementById(i).className.replace(" occuped","");
 	}
 	for(i=1;i<=end;i++){
-		//if(i.isOccupe){
-			//document.getElementById(i+start-1).className+=" occuped";
-		//}
+		if(isOccuped(i)){
+			document.getElementById(i+start-1).className+=" occuped";
+		}
 		document.getElementById(i+start-1).innerHTML=i;
 	}
 }
 
 function init(){
 	var d = new Date();
-
 	var ele =document.getElementById("month");
 	ele.value=d.getMonth()+1;
 	ele.addEventListener("change",(e)=>{
@@ -47,6 +57,22 @@ function init(){
 	})
 	ele.value=d.getFullYear();
 	fill(d.getMonth()+1,d.getFullYear());
+	for(i=1;i<=35;i++){
+		document.getElementById(i).addEventListener('click',(e)=>{
+			if(e.target.className.includes("occuped")){
+				Swal.fire({
+				  icon: 'error',
+				  title: 'Oops...',
+				  text: 'This date is already occuped!',
+				})
+			}else{
+				var day = e.target.innerHTML;
+				var month = document.getElementById('month').value;
+				var year = document.getElementById('years').value;
+				document.location.href="./insert.html?days="+day+"&month="+month+"&year="+year;
+			}
+		})
+	}
 }
 
 init();

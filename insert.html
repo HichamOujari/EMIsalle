@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EMISalle - Insert</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+	<input hidden type="checkbox" name="notify" id="notify">
+	<input hidden type="checkbox" name="menu" id="menu">
+	<nav class="barnav">
+		<label for="menu"><i class="fas fa-bars menu"></i></label>
+		<img class="Emilogo" src="./Assets/logo.gif">
+		<span class="supertitle">EMI<span class="minititle">Salle</span></span>
+		<label for="notify"><i class="fas fa-bell notifi"></i></label>
+	</nav>
+	<div class="notify">
+		<label for="notify"><i class="fas fa-bell notifi bt">Notify :</i></label>
+		<div class="notify_content">
+			<br>
+		</div>
+	</div>
+	<div class="barside">
+		 <a href="./index.html"><i class="fas fa-home"> </i>Home</a>
+		 <a href="./listroom.html"><i class="fas fa-list"></i> List of Rooms</a>
+		 <a href="./reserv.html"><i class="fas fa-calendar"></i> My Reservation</a>
+		 <a href="./addroom.html"><i class="fa fa-calendar-plus"></i> Add room</a>
+		 <a href="./bookroom.html"><i class="fas fa-building"></i> Reserve Room</a>
+		 <a href="./profil.html"><i class="fas fa-user"></i> Profil</a>
+	</div>
+
+	<div class="content">
+		<div class="formIns">
+			<form action="./insert.php" method="POST">
+				<p class="titleIns">Room reservation</p>
+				<label>username : </label> <input class="txtIns" required="" type="text" name="username"><br>
+				<label>Salle N: </label> 
+				<select required="" name="salle">
+					<option value=""></option>
+					<option value="1">Salle 1</option>
+					<option value="2">Salle 2</option>
+					<option value="3">Salle 3</option>
+					<option value="4">Salle 4</option>
+					<option value="5">Salle 5</option>
+				</select><br>
+				<label>Period : </label> 
+				<select required="" name="period">
+					<option value=""></option>
+					<option value="1">12:00-13:00</option>
+					<option value="1">13:00-14:00</option>
+					<option value="1">18:00-19:00</option>
+					<option value="2">19:00-20:00</option>
+					<option value="3">20:00-21:00</option>
+					<option value="4">21:00-22:00</option>
+				</select>
+				<input class="submitIns" type="submit" value="Save">
+			</form><br>
+		</div>
+	</div>
+	<script type="text/javascript" src="./main.js"></script>
+</body>
+</html>
