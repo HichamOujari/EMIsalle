@@ -120,15 +120,15 @@ a{
 	font-style: italic;
 	padding: 30px;
 	font-weight: 900;
-	margin-bottom: 50px;
+	margin-bottom: 15px;
 }
 .left{
 	width: 49%;
 	float: left;
 }
 .right{
-	width: 49%;
-	float: right;
+	width: 80%;
+	margin-left:10%; 
 }
 .input{
 	width: 49%;
@@ -186,7 +186,7 @@ a{
 	font-style: oblique;
 	font-weight: 400;
 	width: 1fr;
-	padding-top: 5px;
+	padding-top: 17px;
 	font-size: 20px;
 	background-color: #1776;
 }
