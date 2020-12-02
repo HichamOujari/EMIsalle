@@ -1,0 +1,218 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+.barnav{
+	background-color: #2471A3;
+	text-align: center;
+	border-bottom:2px solid black;
+}
+.Emilogo{
+	width: 60px;
+	height: 40px;
+	margin-right: 10px;
+}
+.supertitle{
+	font-weight: 900;
+	font-size: 40px;
+	color:#7AAFD0;
+
+}
+.minititle{
+	color:black;
+}
+
+.notifi{
+	float:right;
+	margin-top:12px;
+	margin-right: 15px;
+	font-size: 30px;
+}
+.menu{
+	float:left;
+	margin-top:12px;
+	margin-left: 15px;
+	font-size: 30px;
+}
+.notifi:hover,.menu:hover{
+	color:white;
+	cursor: pointer;
+}
+
+#menu:checked~.barside{
+	margin-left:-320px;
+}
+#menu:checked~.content{
+	width: 100%;
+}
+.bt{
+	border-bottom: 2px solid black;
+	margin-right: 55px;
+}
+#selected{
+	color:#154360;
+}
+.notify{
+	height: 100vh;
+	background-color: #2471A3;
+	width: 250px;
+	position: fixed;
+	top:0px;
+	right: -350px;
+	float: right;
+	border-left: 1px solid black;
+	border-top:2px solid black;
+	box-shadow: -70px 70px 1000px black;
+	transition: 1s;
+	transition-property: right;
+}
+.notify_content{
+	margin-top: 55px;
+	background-color: #ddd;
+	width: 90%;
+	margin-left: 5%;
+	height: 90vh;
+	border:2px solid black;
+	border-radius: 30px;
+}
+#notify:checked~.notify{
+	right: 1px;
+}
+
+.barside{
+	padding-top: 50px;
+	display: grid;
+	grid-gap: 10px;
+	white-space: 10px;
+	height: 90vh;
+	background-color: #2471A3;
+	width: 230px;
+	border-top:2px solid black;
+	transition: 1s;
+	transition-property: margin-left;
+	float: left;
+	border-right: 1px solid black;
+}
+
+.barside>a{
+	font-size: 25px;
+	color: black;
+	font-weight: 900;
+	padding-left: 20px;
+}
+
+.barside a:hover{
+	background-color: #6DADD5;
+}
+.content{
+	width: calc(100% - 240px);
+	float: right;
+	transition: 1s;
+	transition-property: width;
+}
+.cal_header{
+	font-size: 35px;
+	font-style: italic;
+	padding: 30px;
+	font-weight: 900;
+	margin-bottom: 50px;
+}
+.left{
+	width: 49%;
+	float: left;
+}
+.right{
+	width: 49%;
+	float: right;
+}
+.input{
+	width: 49%;
+	height: 40px;
+	font-style: italic;
+	font-size: 25px;
+	font-weight: 900;
+	cursor: pointer;
+}
+.inputMonth{
+
+}
+.inputYear{
+
+}
+.Ndays{
+	display: grid;
+  	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  	margin-right: 10px;
+  	margin-left: 10px;
+}
+.Ndays>p{
+	text-align: center;
+	border:2px solid black;
+	font-style: oblique;
+	font-weight: 400;
+	font-size: 20px;
+	background-color: #DDD;
+	width: 1fr;
+}
+
+.days{
+	display: grid;
+  	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  	margin-right: 10px;
+  	margin-right: 10px;
+  	margin-left: 10px;
+}
+.days>div{
+	text-align: center;
+	border:2px solid black;
+	font-style: oblique;
+	height: 90px;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+.semaine{
+	display: grid;
+  	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.semaine>div{
+	text-align: center;
+	border-right:2px solid black;
+	font-style: oblique;
+	font-weight: 400;
+	width: 1fr;
+	padding-top: 5px;
+	font-size: 20px;
+	background-color: #1776;
+}
+.occuped{
+	color: red;
+}
+@media screen and (max-width: 804px){
+	.barside{
+		position: fixed;
+		top:50px;
+		left: -320px;
+		margin-left:-320px;
+		transition: 1s;
+		transition-property: left;
+		box-shadow: 60px 60px 1000px black;
+	}
+	.input{
+		width: 100%;
+	}
+	.content{
+		width: 100%;
+	}
+	#menu:checked~.barside{
+		left:320px;
+	}
+	#menu:checked~.content{
+		width: 100%;
+	}
+}
