@@ -13,6 +13,10 @@ body{
 	background-size: cover;
 }
 
+select,input{
+	border-radius: 30px;
+	border: 2px solid black;
+}
 .barnav{
 	background-color: #2471A3;
 	text-align: center;
