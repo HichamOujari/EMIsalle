@@ -95,7 +95,7 @@ body{
 	display: grid;
 	grid-gap: 10px;
 	white-space: 10px;
-	height: 90vh;
+	height: 99vh;
 	background-color: #2471A3;
 	width: 230px;
 	border-top:2px solid black;
@@ -254,7 +254,7 @@ body{
 	display: inline-block;
 	margin-top: 30px;
 }
-@media screen and (max-width: 845px){
+@media screen and (max-width: 860px){
 	.barside{
 		position: fixed;
 		top:50px;
@@ -277,7 +277,7 @@ body{
 		width: 100%;
 	}
 }
-@media screen and (max-width: 602px){
+@media screen and (max-width: 622px){
 	.formIns>form{
 		padding:0;
 	}
