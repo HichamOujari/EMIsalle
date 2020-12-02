@@ -257,7 +257,18 @@ select,input{
 	width: 40%;
 	display: inline-block;
 	margin-top: 30px;
+	cursor: pointer;
 }
+.submitIns:hover{
+	box-shadow: 10px 10px 20px black;
+}
+.txtIns:hover{
+	box-shadow: 10px 10px 20px black;
+}
+select:hover{
+	box-shadow: 10px 10px 20px black;
+}
+
 @media screen and (max-width: 860px){
 	.barside{
 		position: fixed;
